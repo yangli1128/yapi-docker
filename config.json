@@ -3,7 +3,7 @@
   "adminAccount": "crper@outlook.com",
   "versionNotify": true,
   "db": {
-    "servername": "yapi-mongo",
+    "servername": "192.168.1.254",
     "DATABASE": "yapi",
     "port": 27017
   },
