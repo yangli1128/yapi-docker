@@ -1,7 +1,7 @@
 # 基于 alpine镜像构建
 FROM alpine:latest
 # 镜像维护者的信息
-LABEL MAINTAINER = 'crper@outlook.com(https://github.com/crper)'
+LABEL MAINTAINER = 'https://github.com/yangli1128'
 # 基础环境构建
 # - 更新源
 # - 安装基础环境包
@@ -13,7 +13,7 @@ LABEL MAINTAINER = 'crper@outlook.com(https://github.com/crper)'
 RUN apk update \
   && apk add --no-cache  git nodejs npm  bash vim  python python-dev gcc libcurl make\
   && rm -rf /var/cache/apk/* \
-  && mkdir /yapi && cd /yapi && git clone https://github.com/YMFE/yapi.git vendors \
+  && mkdir /yapi && cd /yapi && git clone https://github.com/yangli1128/yapi.git vendors \
   && npm i -g node-gyp yapi-cli npm@latest \
   && cd /yapi/vendors && npm i --production;
 # 工作目录
