@@ -28,7 +28,7 @@ COPY .vimrc /root/
 EXPOSE 3000
 
 # 配置入口为bash shell
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT "entrypoint.sh" $0 $0
 
 
 # `vim` : 编辑神器
