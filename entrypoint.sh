@@ -2,8 +2,12 @@
 
 # yapi初始化后会有一个init.lock文件
 lockPath="/yapi/init.lock"
-
-
+#根据参数修改访问的二级目录
+cd /yapi/verdors/static
+if [ -n "$1" ]
+then
+	sed -i "s/dir=''/dir='$1'/g" index.html
+fi
 # 进入yapi项目
 cd /yapi/vendors
 
